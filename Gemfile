@@ -27,7 +27,7 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 gem 'pg'
-
+gem 'taps', '~> 0.3.24'
 # Use unicorn as the app server
 # gem 'unicorn'
 

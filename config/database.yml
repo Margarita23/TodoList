@@ -23,7 +23,7 @@ default: &default
 
 development:
   <<: *default
-  database: firstApp_development
+  database: ruby-garage_development
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -57,7 +57,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: firstApp_test
+  database: ruby-garage_test
   
   username: postgres
 
@@ -85,6 +85,6 @@ test:
 #
 production:
   <<: *default
-  database: firstApp_production
-  username: firstApp
-  password: <%= ENV['FIRSTAPP_DATABASE_PASSWORD'] %>
+  database: ruby-garage_production
+  username: ruby-garage
+  password: <%= ENV['RUBY-GARAGE_DATABASE_PASSWORD'] %>
