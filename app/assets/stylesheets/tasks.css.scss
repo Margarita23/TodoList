@@ -1,0 +1,555 @@
+//colors
+$color_gray_nurse_approx: #eaeaea;
+$color_chambray_approx: #315589;
+$color_steel_blue_approx: #517ebf;
+$color_azure_approx: #3663a1;
+$color_polo_blue_approx: #8cacd3;
+$black: #000;
+$white: #fff;
+$color_danube_approx: #5c8acb;
+$color_dove_gray_approx: #707070;
+$black_10: rgba(0,0,0,0.1);
+$color_amazon_approx: #447557;
+$color_vista_blue_approx: #94cbae;
+$color_spring_leaves_approx: #508767;
+$color_gallery_approx: #eee;
+$color_pink_swan_approx: #bbb;
+$color_nobel_approx: #b4b2aa;
+$color_nomad_approx: #b3b3a3;
+$color_silver_chalice_approx: #aaaaaa;
+$color_mountain_mist_approx: #999999;
+$color_cumulus_approx: #fcfed5;
+$color_vanilla_ice_approx: #efdadf;
+$color_celeste_approx: #cccccc;
+
+//fonts
+$font_0: Myriad Pro;
+$font_1: Arial;
+
+//urls
+$url_0: url(/assets/fon.jpg);
+$url_1: url(/assets/add_todo.png);
+$url_2: url(/assets/pen.png);
+$url_3: url(/assets/trash.png);
+$url_4: url(/assets/add.png);
+$url_5: url(/assets/top_down.png);
+$url_6: url(/assets/pen_grey.png);
+$url_7: url(/assets/bin_grey.png);
+
+//@extend-elements
+//original selectors
+//#username, #password
+%extend_1 {
+	padding: 3px 5px;
+	border-top: 1px solid $color_dove_gray_approx;
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: inset 0 1px 3px 0 $black_10;
+	border-bottom: 0;
+	border-left: 0;
+	border-right: 0;
+	height: 23px;
+	width: 200px;
+}
+body {
+	background-image: $url_0;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+#wrapper {
+	h3 {
+		text-transform: uppercase;
+		text-align: center;
+		font-family: $font_0, $font_1;
+		margin: 35px 0 0;
+		//Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		text-shadow: 0 0.5px 0 $color_gray_nurse_approx;
+	}
+	p {
+		//Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		text-shadow: 0 0.5px 0 $color_gray_nurse_approx;
+		font-size: 0.7em;
+		text-transform: uppercase;
+		text-align: center;
+		font-family: $font_0, $font_1;
+		margin: 0;
+	}
+}
+#buttonsWrap{
+    width: 240px;
+	height: 42px;
+    margin: 10px auto;
+}
+#back_to {
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 4px 4px 4px 4px;
+	border: 1px solid $color_chambray_approx;
+	width: 175px;
+	height: 40px;
+	background: linear-gradient($color_steel_blue_approx,$color_azure_approx);
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: inset 0 1px 0 $color_polo_blue_approx;
+	cursor: pointer;
+    margin: 10px auto;
+	a {
+		font-weight: 600;
+		font-size: 17px;
+		//Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		text-shadow: 0 1px 0 $black;
+		font-family: $font_0, $font_1;
+		color: $white;
+		display: inline-block;
+		margin: 11px 19px;
+		position: relative;
+        text-decoration: none;
+	}
+}
+#statistics {
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 4px 4px 4px 4px;
+	border: 1px solid $color_chambray_approx;
+	width: 110px;
+	height: 40px;
+	background: linear-gradient($color_steel_blue_approx,$color_azure_approx);
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: inset 0 1px 0 $color_polo_blue_approx;
+	cursor: pointer;
+    display:inline-block;
+	a {
+		font-weight: 600;
+		font-size: 17px;
+		//Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		text-shadow: 0 1px 0 $black;
+		font-family: $font_0, $font_1;
+		color: $white;
+		display: inline-block;
+		margin: 11px 19px;
+		position: relative;
+        text-decoration: none;
+	}
+}
+#signOut {
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 4px 4px 4px 4px;
+	border: 1px solid $color_chambray_approx;
+	width: 110px;
+	height: 40px;
+	background: linear-gradient($color_steel_blue_approx,$color_azure_approx);
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: inset 0 1px 0 $color_polo_blue_approx;
+	cursor: pointer;
+    display:inline-block;
+	a {
+		font-weight: 600;
+		font-size: 17px;
+		//Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		text-shadow: 0 1px 0 $black;
+		font-family: $font_0, $font_1;
+		color: $white;
+		display: inline-block;
+		margin: 11px 19px;
+		position: relative;
+        text-decoration: none;
+	}
+}
+.formData>form {
+	width: 200px;
+	margin: 10px auto;
+	position: relative;
+}
+.formData {
+	width: 350px;
+	height: 250px;
+	border: 1px solid $color_chambray_approx;
+	margin: 40px auto;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 20px;
+	background: linear-gradient($color_danube_approx,$color_chambray_approx);
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: inset 0 1px 0 $color_polo_blue_approx;
+    color: $white;
+    font-size: 16px;
+    //Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	text-shadow: 0 1px 1px $black;
+    position: relative;
+    a{
+        right: 100px;
+        padding: 5px;
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 4px;
+		border: 1px solid $color_amazon_approx;
+		text-align: center;
+		color: $white;
+		font-size: large;
+        font-family: $font_0, $font_1; 
+		width: 65px;
+		height: 18px;
+		background: linear-gradient($color_gallery_approx,$color_pink_swan_approx);
+		//Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		text-shadow: 0 1px 0 $black;
+        text-decoration: none;
+		cursor: pointer;
+		position: absolute;
+    }
+	.field {
+		margin: 10px 0;
+	}
+    .rem_field{
+        font-size: 14px;
+        margin: 20px 0;
+    }
+    .pas_field{
+        font-size: 18px;
+        margin: 20px 0;
+    }
+    .mail_field{
+        font-size: 18px;
+        margin: 20px 0;
+    }
+	.actions {
+        input{
+		padding: 5px;
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 4px;
+		border: 1px solid $color_amazon_approx;
+		text-align: center;
+		color: $white;
+		font-size: large;
+        font-family: $font_0, $font_1; 
+		width: 70px;
+		height: 30px;
+		background: linear-gradient($color_vista_blue_approx,$color_spring_leaves_approx);
+		//Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		text-shadow: 0 1px 0 $black;
+		cursor: pointer;
+		position: absolute;
+        }
+	}
+}
+#username {
+	@extend %extend_1;
+}
+#password {
+	@extend %extend_1;
+}
+#add {
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 4px 4px 4px 4px;
+	border: 1px solid $color_chambray_approx;
+	width: 200px;
+	height: 45px;
+	background: linear-gradient($color_steel_blue_approx,$color_azure_approx);
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: inset 0 1px 0 $color_polo_blue_approx;
+	margin: 40px auto;
+	cursor: pointer;
+	a {
+		font-weight: 600;
+		font-size: 17px;
+		//Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		text-shadow: 0 1px 0 $black;
+		font-family: $font_0, $font_1;
+		color: $white;
+		display: inline-block;
+		margin: 15px;
+		position: relative;
+		left: 40px;
+        text-decoration: none;
+		&:before {
+			display: inline-block;
+			content: '';
+			width: 24px;
+			height: 24px;
+			background-image: $url_1;
+			position: absolute;
+			left: -38px;
+			top: -4px;
+		}
+	}
+}
+#main {
+	list-style-type: none;
+	width: 700px;
+	margin: 0 auto;
+	padding: 0;
+}
+#main>li {
+	background-color: $white;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 0 0 10px 10px;
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: 0 0.5px 0 $black;
+	margin: 40px 0 0;
+}
+.firstrow {
+	min-height: 48px;
+	color: $white;
+	background: linear-gradient($color_danube_approx,$color_chambray_approx);
+	font-size: 16px;
+	border: 1px solid $color_chambray_approx;
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: inset 0 1px 0 $color_polo_blue_approx;
+	.pen_grey {
+		background-image: $url_2;
+		width: 16px;
+		height: 16px;
+		display: inline-block;
+		float: right;
+		margin: 16px 0 16px 10px;
+		padding: 0 20px 0 0;
+		background-repeat: no-repeat;
+		background-position: center;
+		border-right: 1px solid $color_steel_blue_approx;
+		cursor: pointer;
+	}
+	.bin_grey {
+		background-image: $url_3;
+		width: 16px;
+		height: 16px;
+		display: inline-block;
+		float: right;
+		background-repeat: no-repeat;
+		background-position: center;
+		margin: 16px 20px 16px 10px;
+		cursor: pointer;
+	}
+	&:hover .button_blueField {
+		opacity: 1;
+	}
+}
+.name_of_task {
+	width: 540px;
+	font-size: 18px;
+	display: inline-block;
+	padding: 8px 0 0;
+	margin: 4px 15px 10px 0;
+	//Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	text-shadow: 0 1px 1px $black;
+	position: relative;
+	left: 54px;
+}
+.coverDate {
+	cursor: pointer;
+	width: 24px;
+	height: 22px;
+	display: inline-block;
+	margin-left: 15px;
+	margin-top: 10px;
+	position: absolute;
+	border: none;
+	background-color: inherit;
+}
+.datePick {
+	display: none;
+}
+.button_blueField {
+	display: inline-block;
+	width: 143px;
+	height: 40px;
+	position: absolute;
+	opacity: 0;
+	//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+	transition: opacity 0.3s ease-in-out;
+}
+.new_task {
+	background: linear-gradient($color_gallery_approx,$color_pink_swan_approx);
+	border-right: 1px solid $color_nobel_approx;
+	border-left: 1px solid $color_nomad_approx;
+	border-bottom: 1px solid $color_silver_chalice_approx;
+	min-height: 49px;
+	font-family: $font_1;
+	font-size: 14px;
+	position: relative;
+}
+#main{
+.field {
+	display: inline-block;
+	position: absolute;
+}
+}
+.add_task {
+	padding: 3px 5px;
+	border-top: 1px solid $color_dove_gray_approx;
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: inset 0 1px 3px 0 $black_10;
+	border-bottom: 0;
+	border-left: 0;
+	border-right: 0;
+	height: 23px;
+	width: 520px;
+	position: absolute;
+	top: 10px;
+	display: inline-block;
+}
+#main{
+    .actions {
+        position: absolute;
+        right: 9px;
+        display: inline-block;
+        input {
+            padding: 5px;
+            //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+            border-radius: 0 4px 4px 0;
+            border: 1px solid $color_amazon_approx;
+            text-align: center;
+            color: $white;
+            width: 110px;
+            height: 30px;
+            background: linear-gradient($color_vista_blue_approx,$color_spring_leaves_approx);
+            //Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+            text-shadow: 0 1px 0 $black;
+            margin: 10px 0 4px;
+            cursor: pointer;
+            font-family: $font_0, $font_1;
+        }
+    }
+}
+.plus {
+	background-image: $url_4;
+	width: 24px;
+	height: 24px;
+	display: inline-block;
+	margin: 13px;
+}
+.task_list {
+	list-style-type: none;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0;
+	color: $color_mountain_mist_approx;
+	font-size: 13px;
+	li {
+		width: 100%;
+		border-bottom: 1px solid $color_gray_nurse_approx;
+		padding: 0;
+		display: table;
+		border-collapse: separate;
+		border-spacing: 3px 0;
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: all 0.2s ease-in-out;
+		&:hover {
+			background-color: $color_cumulus_approx;
+		}
+		&:last-child {
+			border-bottom: 0;
+			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+			border-radius: 0 0 10px 10px;
+		}
+	}
+}
+.task_list>li>div {
+	min-height: 48px;
+	display: inline-block;
+	height: 100%;
+	display: table-cell;
+}
+.checkbox_field {
+	width: 25px;
+	min-height: 48px;
+	border-right: 1px solid $color_vanilla_ice_approx;
+	vertical-align: top;
+	input {
+		margin: 13px 10px;
+	}
+}
+.text_field {
+	width: 547px;
+	border-left: 1px solid $color_vanilla_ice_approx;
+	vertical-align: top;
+	padding: 13px 0 13px 10px;
+	//Instead of the line below you could use @include hyphens($value)
+	hyphens: auto;
+	//Instead of the line below you could use @include word-break($value)
+	word-break: normal;
+}
+.task_list li:hover {
+    .button_field{
+       width: 119px; 
+    }
+	.top_down {
+		display: inline-block;
+	}
+	.pen_grey {
+		display: inline-block;
+	}
+	.bin_grey {
+		display: inline-block;
+	}
+}
+.button_field {
+	width: 119px;
+	border-left: 1px solid $color_gray_nurse_approx;
+    .pen_grey {
+		background-image: $url_6;
+		width: 16px;
+		height: 16px;
+		display: none;
+		float: right;
+		background-repeat: no-repeat;
+		background-position: center;
+		cursor: pointer;
+		margin: 10px 0 10px 6px;
+		padding-right: 10px;
+		border-right: 1px solid $color_celeste_approx;
+	}
+    .bin_grey {
+		background-image: $url_7;
+		width: 16px;
+		height: 16px;
+		display: none;
+		float: right;
+		background-repeat: no-repeat;
+		background-position: center;
+		cursor: pointer;
+		padding: 10px 8px 10px 0;
+		margin: 0 0 0 7px;
+	}
+    .top_down {
+        background-image: $url_5;
+        width: 16px;
+        height: 16px;
+        display: none;
+        float: right;
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+        margin: 10px 0;
+        padding-right: 12px;
+        border-right: 1px solid $color_celeste_approx;
+}
+}
+
+#foot p {
+	text-align: center;
+	font-family: $font_0, $font_1;
+	color: $white;
+	font-size: 14px;
+	opacity: 0.8;
+}
+#stat{
+    display: block;
+    background: linear-gradient($color_gallery_approx,$color_pink_swan_approx);
+	border-right: 1px solid $color_nobel_approx;
+	border-left: 1px solid $color_nomad_approx;
+	border-bottom: 1px solid $color_silver_chalice_approx;
+	min-height: 49px;
+	font-family: $font_1;
+	font-size: 14px;
+	position: relative;
+    border-radius: 10px;
+    padding: 20px;
+    margin:10px auto;
+    width: 700px;
+    table{
+        border-collapse: collapse;
+        width: 50%;
+    }
+    table, th, td {
+        border: 1px solid white;
+        height: 10px;
+        padding: 2px;
+}  
+}
+p{
+    opacity: 0.7;
+}

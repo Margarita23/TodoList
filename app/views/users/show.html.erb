@@ -1,0 +1,10 @@
+<ul id="main">
+    <% @user.lists.each do |list|%>
+    <%= render list %>
+    <% end %>
+    </ul>
+<div id="add"><%= link_to 'Add TODO List', user_lists_path(@user,@list), method: :post, remote: true %></div>
+<div id="buttonsWrap">
+    <div id="statistics"><%= link_to "Statistics", statistics_path, method: :get %></div>
+    <div id="signOut"><%= link_to "Sign out", destroy_user_session_path, :method => :delete %></div>
+</div>

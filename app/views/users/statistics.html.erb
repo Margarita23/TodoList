@@ -1,0 +1,118 @@
+<div id = "stat">
+<ol>
+    <li>
+        <h4>All statuses, not repeating, alphabetically ordered:</h4>
+        <ol>
+            <% @query_0.each do |f| %>
+            <li><%= f.status%></li>
+            <% end %>
+        </ol>
+    </li>
+    <li>
+        <h4>The count of all tasks in each project, order by tasks count descending:</h4>
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Count</th>
+                </tr>
+                <% @sorted.each do |el|%>
+                <tr>
+                    <td><%= el["name"] %></td>
+                    <td><%= el["value"] %></td>
+                </tr>
+                <% end %>
+            </table>
+    </li>
+    <li>
+        <h4>The count of all tasks in each project, order by projects names:</h4>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Count</th>
+            </tr>
+            <% @sorted_2.each do |el| %>
+            <tr>
+                <td><%= el["name"] %></td>
+                <td><%= el["value"] %></td>
+            </tr>
+            <% end %>
+        </table>
+    </li>
+    <li>
+        <h4>The tasks for all projects having the name beginning with “N” letter:</h4>
+        <ol>
+            <% @exp.each do |r| %>
+                <li>
+                    <ul>
+                        <% r.tasks.each do |t| %>
+                            <li><%= t.name%></li>
+                        <% end %>
+                    </ul>
+                </li>
+            <% end %>  
+        </ol>
+    </li>
+    <li>
+        <h4>The list of all projects containing the ‘a’ letter in the middle of the name, and
+        show the tasks count near each project:</h4>
+        <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Count</th>
+                </tr>
+            <% @exp_lists_a.each do |el|%>
+                <tr>
+                    <td><%= el.title %></td>
+                    <td><%= el.tasks.size %></td>
+                </tr>
+                <% end %>
+            </table>
+    </li>
+    <li>
+        <h4>The list of tasks with duplicate names. Order alphabetically:</h4>
+        <ol>
+            <% @res.each do |t| %>
+        <% if t[1]>1%>
+            <li><%= t[0]["name"] %></li>
+        <% end %>
+        <% end %>
+        </ol>
+    </li>
+    <li>
+        <h4>The list of tasks having several exact matches of both name and status, from
+        the project ‘Garage’. Order by matches count:</h4>
+        <% if @pro_garage.nil? %>
+        <p>There is no project with name 'Garage'!</p>
+        <% else %>
+        <table>
+            <tr>
+                <th>Name of task</th>
+                <th>Status</th>
+                <th>Matches count</th>
+            </tr>
+            <% @sort_get_arr.each do |t| %>
+            <tr>
+                <td><%= t["element"].name %></td>
+                <td><%= t["element"].status %></td>
+                <td><%= t["counter"] %></td>
+            </tr>
+            <% end %>
+        </table>
+        <% end %>
+    </li>
+    <li>
+        <h4>The list of project names having more than 10 tasks in status ‘completed’. Order
+        by project_id:</h4>
+        <ol>
+            <% if @more_10.size==0 %>
+                <p>Nothing is found</p>
+            <% else %>
+                <% @more_10.each do |t| %>
+                    <li><%= t.title%></li> 
+                <% end %>
+            <% end %>
+        </ol>
+    </li>
+    </ol>
+</div>
+<div id="back_to"><%= link_to "Back to projects", users_path, method: :get %></div>

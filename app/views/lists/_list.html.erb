@@ -1,0 +1,29 @@
+<% if list.status=='unfinished'%>
+<li id="<%= dom_id(list)%>">
+        <div class="firstrow">
+            <div class="coverDate"><input class="datePick" 
+        <% unless list.deadline.nil? %>
+                value="<%= list.deadline %>"
+                <% end %>>
+            </div><div class="name_of_task"><%=list.title %></div><div class="button_blueField">
+                <%= link_to '', user_list_path(list.user_id, list), method: :delete, remote: true, class:'bin_grey' %>
+                <div class="pen_grey"></div>
+                </div>
+        </div>
+    <%= form_for([@user, list, @task], remote:true, class: 'secondrow') do |f|%>
+    <div class="plus"></div>
+            <div class="field"> <%= f.text_field :name, class: "add_task", placeholder: "Start typing here to create a task..." %>
+            </div>
+            <div class="actions">
+            <%= f.submit 'Add Task' %>
+            </div>
+    <% end %>
+    <div class="cover">
+        <ul class="task_list" id="task_<%= dom_id(list)%>">
+            <% list.tasks.order(:priority).each do |task|%>
+            <%= render task %>
+            <% end %>
+        </ul>
+        </div>
+    </li>
+<% end %>

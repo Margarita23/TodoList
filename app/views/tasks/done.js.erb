@@ -1,0 +1,4 @@
+$('#<%= dom_id(@task) %>').fadeOut();
+<% if @list.status=='done' %>
+    $('#<%= dom_id(@list) %>').fadeOut();
+    <% end %>

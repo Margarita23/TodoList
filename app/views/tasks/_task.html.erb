@@ -1,0 +1,12 @@
+<% if task.status=='unfinished'%>
+<li id="<%= dom_id(task)%>">
+    <div class="checkbox_field">
+        <%= check_box_tag 'done', task.id %>
+    </div>
+                <div class="text_field"><%= task.name %></div><div class="button_field">
+                    <%= link_to '', user_list_task_path(@user,task.list_id,task), method: :delete, remote: true, class:'bin_grey' %>
+                    <div class="pen_grey"></div>
+                    <div class="top_down"></div>
+                </div>
+            </li>
+<% end %>

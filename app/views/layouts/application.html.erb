@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>FirstApp</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div id="wrapper">
+        <h3>simple todo list</h3>
+        <p>from ruby garage</p>
+    </div>
+    <% if current_user %>
+ <% end %>
+<%= yield %>
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
+<div id="foot"><p>&#169;Ruby Garage</p></div>
+</body>
+</html>

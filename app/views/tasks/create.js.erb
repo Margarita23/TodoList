@@ -1,0 +1,9 @@
+<% if @name.blank? %>
+    $('#list_<%= @task.list_id %> input.add_task').effect('highlight',{color: '#58eaf0'});
+<% else %>
+    $('#task_list_<%= @task.list_id %>').append('<%= escape_javascript(render @task)%>');
+    $('#list_<%= @task.list_id %> input.add_task').val('');
+<% end %>
+    updateTaskClickEvent(document.getElementById('<%= dom_id(@task)%>').getElementsByClassName('pen_grey')[0]);
+var cb = document.getElementById('<%= dom_id(@task)%>').getElementsByClassName('checkbox_field')[0];
+checkboxEvent(cb.getElementsByTagName('input')[0]);

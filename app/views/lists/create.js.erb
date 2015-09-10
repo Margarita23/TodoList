@@ -1,0 +1,4 @@
+$('#main').append('<%= escape_javascript(render @list)%>');
+updateTaskClickEvent(document.getElementById('<%= dom_id(@list)%>').getElementsByClassName('pen_grey')[0]);
+addDatepicker(document.getElementById('<%= dom_id(@list)%>').getElementsByClassName('datePick')[0]);
+dragDropTask(document.getElementById('<%= dom_id(@list)%>').getElementsByClassName('task_list')[0]);
