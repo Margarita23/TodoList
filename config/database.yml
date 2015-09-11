@@ -83,8 +83,8 @@ test:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
-production:
-  <<: *default
-  database: ruby-garage_production
-  username: ruby-garage
-  password: <%= ENV['RUBY-GARAGE_DATABASE_PASSWORD'] %>
+#production:
+ # <<: *default
+  #database: ruby-garage_production
+  #username: ruby-garage
+  #password: <%= ENV['RUBY-GARAGE_DATABASE_PASSWORD'] %>
