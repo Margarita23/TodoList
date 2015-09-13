@@ -128,7 +128,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails (= 2.1.4)
   jquery-ui-rails (~> 5.0)
-  pg
+  pg (= 0.18.3)
   rails (= 4.1.8)
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)
