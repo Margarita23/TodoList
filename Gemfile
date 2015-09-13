@@ -4,7 +4,7 @@ source 'http://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'devise'
 gem 'rails', '4.1.8'
-gem 'pg', '0.8.0'
+gem 'pg', '0.10.1'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
