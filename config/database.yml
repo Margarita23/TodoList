@@ -24,7 +24,7 @@ default: &default
 development:
   <<: *default
   database: ruby-garage_development
-
+  timeout: 5000
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
   # When left blank, postgres will use the default role. This is
@@ -58,7 +58,7 @@ development:
 test:
   <<: *default
   database: ruby-garage_test
-  
+  timeout: 5000
   username: postgres
 
   # The password associated with the postgres role (username).
