@@ -86,5 +86,5 @@ test:
 production:
   <<: *default
   database: ruby-garage_production
-  username: ruby-garage
+  username: postgres
   password: <%= ENV['RUBY-GARAGE_DATABASE_PASSWORD'] %>
