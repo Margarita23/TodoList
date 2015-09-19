@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: nmetau
+  api_key: '632573879898973'
+  api_secret: VFPHJAD79RXJMINHWafRBINo6Rc
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: nmetau
+  api_key: '632573879898973'
+  api_secret: VFPHJAD79RXJMINHWafRBINo6Rc
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: nmetau
+  api_key: '632573879898973'
+  api_secret: VFPHJAD79RXJMINHWafRBINo6Rc
+  enhance_image_tag: true
+  static_image_support: false
