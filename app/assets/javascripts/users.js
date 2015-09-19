@@ -68,7 +68,7 @@ function updateTaskClickEvent(oneOf){
 function addDatepicker(element){
     $( element ).datepicker({
       showOn: "button",
-      buttonImage: "/assets/note.png",
+      buttonImage: "http://res.cloudinary.com/nmetau/image/upload/v1442645925/note_nlc358.png",
       buttonImageOnly: true,
       dateFormat: "yy-mm-dd",
       beforeShow: function(input,inst){
