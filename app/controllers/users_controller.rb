@@ -26,7 +26,7 @@ class UsersController < ApplicationController
 
   def statistics
     @user = User.find(params[:id])
-query 1
+#query 1
     @query_0 = @user.tasks.require(:status).uniq
     #sort = []
     #@user.lists.each do |i|
