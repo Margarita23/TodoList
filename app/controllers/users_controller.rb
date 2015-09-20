@@ -25,13 +25,13 @@ class UsersController < ApplicationController
   end
 
   def statistics
-    #@user = User.find(params[:id])
-#query 1
-    #@query_0 = @user.tasks.select(:status).distinct
-    #sort = []
-    #@user.lists.each do |i|
-     #   sort.push({"value"=>i.tasks.size, "name"=>i.title})
-    #end
+    @user = User.find(params[:id])
+query 1
+    @query_0 = @user.tasks.select(:status).distinct
+    sort = []
+    @user.lists.each do |i|
+        sort.push({"value"=>i.tasks.size, "name"=>i.title})
+    end
 #query 2
     #@sorted = sort.sort_by { |k| k["value"] }.reverse
 #query 3
