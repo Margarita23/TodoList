@@ -37,9 +37,9 @@ class UsersController < ApplicationController
 #query 3
     @sorted_2 = sort.sort_by { |k| k["name"] }
 #query 4
-    @exp = @user.lists.where('title ~* :pat', :pat => '^N')
+    @exp = @user.lists.where(title ~ '^N')
 #query 5
-      @exp_lists_a = @user.lists.where('title ~* :pat', :pat => '.+a.+')
+      @exp_lists_a = @user.lists.where(title ~ '.+a.+')
 #query 6
       rep_sort = []
       @user.tasks.each do |i|
