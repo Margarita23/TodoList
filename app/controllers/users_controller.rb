@@ -28,12 +28,12 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
 #query 1
     @query_0 = @user.tasks.select(:status).uniq
-    #sort = []
-    #@user.lists.each do |i|
-     #   sort.push({"value"=>i.tasks.size, "name"=>i.title})
-    #end
+    sort = []
+    @user.lists.each do |i|
+        sort.push({"value"=>i.tasks.size, "name"=>i.title})
+    end
 #query 2
-    #@sorted = sort.sort_by { |k| k["value"] }.reverse
+    @sorted = sort.sort_by { |k| k["value"] }.reverse
 #query 3
     #@sorted_2 = sort.sort_by { |k| k["name"] }
 #query 4
