@@ -40,6 +40,7 @@
     </li>
     <li>
         <h4>The tasks for all projects having the name beginning with “N” letter:</h4>
+        <% if @exp.size!=0 %>
         <ol>
             <% @exp.each do |r| %>
                 <li>
@@ -51,6 +52,9 @@
                 </li>
             <% end %>  
         </ol>
+        <% else %>
+        <p>Nothing is found</p>
+        <% end %>
     </li>
     <li>
         <h4>The list of all projects containing the ‘a’ letter in the middle of the name, and
