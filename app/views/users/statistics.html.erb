@@ -22,5 +22,20 @@
             <% end %>
         </table>
     </li>
+    <li>
+        <h4>The count of all tasks in each project, order by projects names:</h4>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Count</th>
+            </tr>
+            <% @sorted_2.each do |el| %>
+            <tr>
+                <td><%= el["name"] %></td>
+                <td><%= el["value"] %></td>
+            </tr>
+            <% end %>
+        </table>
+    </li>
 </div>
 <div id="back_to"><%= link_to "Back to projects", users_path, method: :get %></div>
