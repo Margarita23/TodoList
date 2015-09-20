@@ -39,7 +39,7 @@ class UsersController < ApplicationController
 #query 4
     @exp = @user.lists.where('title ~ "^N"')
 #query 5
-      @exp_lists_a = @user.lists.where('title REGEXP ".+a.+"')
+      @exp_lists_a = @user.lists.where('title ~ ".+a.+"')
 #query 6
       rep_sort = []
       @user.tasks.each do |i|
