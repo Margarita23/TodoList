@@ -35,7 +35,7 @@ class UsersController < ApplicationController
 #query 2
     @sorted = sort.sort_by { |k| k["value"] }.reverse
 #query 3
-    #@sorted_2 = sort.sort_by { |k| k["name"] }
+    @sorted_2 = sort.sort_by { |k| k["name"] }
 #query 4
     #@exp = @user.lists.where(title: '^N')
 #query 5
