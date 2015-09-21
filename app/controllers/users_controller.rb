@@ -37,8 +37,7 @@ class UsersController < ApplicationController
 #query 3
     @sorted_2 = sort.sort_by { |k| k["name"] }
 #query 4
-    @exp = select * from @user.lists where title  similar to '%N%'
-    #(title: LIKE 'N%')
+    @exp = @user.lists.where(title: LIKE 'N%')
 #query 5
      # @exp_lists_a = @user.lists.where(title: '.+a.+')
 #query 6
