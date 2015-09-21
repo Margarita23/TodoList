@@ -39,7 +39,8 @@
     </li>
     <li>
         <h4>The tasks for all projects having the name beginning with “N” letter:</h4>
-        <%= @exp %>
+        <% @exp.each do |f| %>
+        <%= f %>
     </li>
 </div>
 <div id="back_to"><%= link_to "Back to projects", users_path, method: :get %></div>
