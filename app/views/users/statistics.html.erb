@@ -39,7 +39,9 @@
     </li>
     <li>
         <h4>The tasks for all projects having the name beginning with “N” letter:</h4>
-        <% if @exp.length!=0 %>
+        <% if @exp.length.nil? %>
+        <p>Nothing is found</p>
+        <% else %>
         <ol>
         <% @exp.each do |r| %>
             <li>
@@ -51,8 +53,6 @@
             </li>
         <% end %>
         </ol>
-        <% else %>
-        <p>Nothing is found</p>
         <% end %>
     </li>
 </div>
