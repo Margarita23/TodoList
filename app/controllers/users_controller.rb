@@ -76,16 +76,15 @@ class UsersController < ApplicationController
       @sort_get_arr = get_arr.sort_by{|c| c['counter']}
       
 #query 8
-      #@more_10 = []
-      #@user.lists.each do |p|
-       #   if p.tasks.where(status: "done").size>10
-        #      @more_10.push(p)
-         # end
-      #end
-          
-    #respond_to do |format|
-     #   format.html    
-    #end
+      @more_10 = []
+      @user.lists.each do |p|
+          if p.tasks.where(status: "done").size>10
+              @more_10.push(p)
+          end
+      end
+    respond_to do |format|
+        format.html    
+    end
   end
   # POST /users
   # POST /users.json
