@@ -48,32 +48,32 @@ class UsersController < ApplicationController
       @rep = rep_sort.sort_by { |k| k["name"] }
       @res = @rep.each_with_object(Hash.new(0)) { |word,counts| counts[word] += 1 }
 #query 7
-      #@pro_garage = @user.lists.find_by(title: 'Garage')
-      #arr_1 = arr_2 = @pro_garage.tasks.to_ary
-      #get_arr = []
+      @pro_garage = @user.lists.find_by(title: 'Garage')
+      arr_1 = arr_2 = @pro_garage.tasks.to_ary
+      get_arr = []
       
-      #arr_1.each do |a1|
-       #   counter=0
-        #  t_arr = []
-         # arr_2.each do |a2|
-          #    unless a1.id==a2.id
-           #       if a1.name==a2.name && a1.status==a2.status
-            #          if counter==0
-             #             counter=2
-              #        else counter+=1
-               #       end
-                #      t_arr.push(a2.id)
-                 # end
-              #end  
-          #end
-          #if counter>0
-           # get_arr.push(Hash["counter"=>counter, "element"=>a1])
-            #  t_arr.each do |el|
-             #     arr_2.delete_if{|a| a.id==el}
-              #end    
-          #end
-      #end
-      #@sort_get_arr = get_arr.sort_by{|c| c['counter']}
+      arr_1.each do |a1|
+          counter=0
+          t_arr = []
+          arr_2.each do |a2|
+              unless a1.id==a2.id
+                  if a1.name==a2.name && a1.status==a2.status
+                      if counter==0
+                          counter=2
+                      else counter+=1
+                      end
+                      t_arr.push(a2.id)
+                  end
+              end  
+          end
+          if counter>0
+            get_arr.push(Hash["counter"=>counter, "element"=>a1])
+              t_arr.each do |el|
+                  arr_2.delete_if{|a| a.id==el}
+              end    
+          end
+      end
+      @sort_get_arr = get_arr.sort_by{|c| c['counter']}
       
 #query 8
       #@more_10 = []
