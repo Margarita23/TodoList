@@ -37,7 +37,7 @@ class UsersController < ApplicationController
 #query 3
     @sorted_2 = sort.sort_by { |k| k["name"] }
 #query 4
-    #@exp = @user.lists.where(title =~ /^N/)
+    @exp = @user.lists.where(/N/.match(title)!=nil)
 #query 5
      # @exp_lists_a = @user.lists.where('title REGEXP ".+a.+"')
 #query 6
