@@ -55,5 +55,15 @@
         <p>Nothing is found</p>
         <% end %>
     </li>
+<li>
+    <h4>The list of tasks with duplicate names. Order alphabetically:</h4>
+    <ol>
+    <% @res.each do |t| %>
+        <% if t[1]>1%>
+            <li><%= t[0]["name"] %></li>
+        <% end %>
+    <% end %>
+    </ol>
+</li>
 </div>
 <div id="back_to"><%= link_to "Back to projects", users_path, method: :get %></div>
