@@ -1,4 +1,5 @@
 <div id = "stat">
+<ol>
     <li>
         <h4>All statuses, not repeating, alphabetically ordered:</h4>
         <ol>
@@ -69,5 +70,19 @@
     </table>
     <% end %>
     </li>
+    <li>
+    <h4>The list of project names having more than 10 tasks in status ‘completed’. Order
+by project_id:</h4>
+        <ol>
+        <% if @more_10.size==0 %>
+        <p>Nothing is found</p>
+        <% else %>
+        <% @more_10.each do |t| %>
+            <li><%= t.title%></li>
+        <% end %>
+        <% end %>
+        </ol>
+    </li>
+</ol>
 </div>
 <div id="back_to"><%= link_to "Back to projects", users_path, method: :get %></div>
