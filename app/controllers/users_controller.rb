@@ -41,12 +41,12 @@ class UsersController < ApplicationController
 #query 5
      # @exp_lists_a = @user.lists.where('title REGEXP ".+a.+"')
 #query 6
-     # rep_sort = []
-      #@user.tasks.each do |i|
-       # rep_sort.push({ "name"=>i.name})
-      #end
-      #@rep = rep_sort.sort_by { |k| k["name"] }
-      #@res = @rep.each_with_object(Hash.new(0)) { |word,counts| counts[word] += 1 }
+      rep_sort = []
+      @user.tasks.each do |i|
+        rep_sort.push({ "name"=>i.name})
+      end
+      @rep = rep_sort.sort_by { |k| k["name"] }
+      @res = @rep.each_with_object(Hash.new(0)) { |word,counts| counts[word] += 1 }
 #query 7
       #@pro_garage = @user.lists.find_by(title: 'Garage')
       #arr_1 = arr_2 = @pro_garage.tasks.to_ary
