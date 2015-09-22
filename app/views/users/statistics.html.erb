@@ -47,5 +47,27 @@
         <% end %>
         </ol>
     </li>
+    <li>
+    <h4>The list of tasks having several exact matches of both name and status, from
+    the project ‘Garage’. Order by matches count:</h4>
+    <% if @pro_garage.nil? %>
+    <p>There is no project with name 'Garage'!</p>
+    <% else %>
+    <table>
+        <tr>
+            <th>Name of task</th>
+            <th>Status</th>
+            <th>Matches count</th>
+        </tr>
+        <% @sort_get_arr.each do |t| %>
+         <tr>
+            <td><%= t["element"].name %></td>
+            <td><%= t["element"].status %></td>
+            <td><%= t["counter"] %></td>
+        </tr>
+        <% end %>
+    </table>
+    <% end %>
+    </li>
 </div>
 <div id="back_to"><%= link_to "Back to projects", users_path, method: :get %></div>
