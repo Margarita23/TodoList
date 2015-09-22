@@ -38,24 +38,7 @@
             <% end %>
         </table>
     </li>
-    <li>
-<h4>The tasks for all projects having the name beginning with “N” letter:</h4>
-<% if @exp.size!=0 %>
-<ol>
-<% @exp.each do |r| %>
-<li>
-<ul>
-<% r.tasks.each do |t| %>
-<li><%= t.name%></li>
-<% end %>
-</ul>
-</li>
-<% end %>
-</ol>
-<% else %>
-<p>Nothing is found</p>
-<% end %>
-</li>
+    
     <li>
         <h4>The list of tasks with duplicate names. Order alphabetically:</h4>
         <ol>
