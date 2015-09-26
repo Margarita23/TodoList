@@ -26,6 +26,8 @@ class UsersController < ApplicationController
 
   def statistics
     @user = User.find(params[:id])
+#query 0
+    @sqarr = SELECT id FROM users
 #query 1
     @query_0 = @user.tasks.select(:status).uniq
     sort = []
