@@ -1,13 +1,13 @@
 <div id = "stat">
     <% @exp.each do |i|%>
-    <p><%= i %></p>
+    <p><%= i.name %></p>
     <% end %>
 <ol>
     <li>
         <h4>All statuses, not repeating, alphabetically ordered:</h4>
         <ol>
             <% @query_0.each do |f| %>
-            <li><%= f.status%></li>
+            <li><%= f.status %></li>
             <% end %>
         </ol>
     </li>
