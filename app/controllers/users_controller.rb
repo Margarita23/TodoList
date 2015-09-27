@@ -37,8 +37,9 @@ class UsersController < ApplicationController
 #query 3
     @sorted_2 = sort.sort_by { |k| k["name"] }
 #query 4
-@sq = @user.lists.find_by_sql("SELECT title FROM lists")
-    #@exp = @user.lists.find_by(title: /^N/)
+@sq = @user.lists.find_by_sql("SELECT title FROM lists
+WHERE title: /^N/
+")
 #query 5
      # @exp_lists_a = @user.lists.where('title REGEXP ".+a.+"')
 #query 6
