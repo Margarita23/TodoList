@@ -39,7 +39,7 @@ class UsersController < ApplicationController
 #query 4
     @sq = @user.lists.find_by_sql("SELECT * FROM lists WHERE title LIKE 'N%' ")
 #query 5
-    @exp_lists_a = @user.lists.find_by_sql("SELECT * FROM lists WERE title LIKE '%a%' ")
+    @exp_lists_a = @user.lists.find_by_sql("SELECT * FROM lists WHERE title LIKE '%a%' ")
 #query 6
       rep_sort = []
       @user.tasks.each do |i|
