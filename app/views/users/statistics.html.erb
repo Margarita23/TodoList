@@ -1,16 +1,4 @@
 <div id = "stat">
-    <table>
-    <% @sq.each do |i|%>
-    <tr>
-        <th><%= i.title %></th>
-    </tr>
-    <% i.tasks.each do |task| %>
-    <tr>
-        <td><%= task.name %></td>
-    </tr>
-    <% end %>
-    <% end %>
-    </table>
 <ol>
     <li>
         <h4>All statuses, not repeating, alphabetically ordered:</h4>
@@ -50,7 +38,21 @@
             <% end %>
         </table>
     </li>
-    
+    <li>
+    <h4>The tasks for all projects having the name beginning with “N” letter:</h4>
+    <table>
+    <% @sq.each do |i|%>
+    <tr>
+        <th><%= i.title %></th>
+    </tr>
+    <% i.tasks.each do |task| %>
+    <tr>
+        <td><%= task.name %></td>
+    </tr>
+    <% end %>
+    <% end %>
+    </table>
+    </li>
     <li>
         <h4>The list of tasks with duplicate names. Order alphabetically:</h4>
         <ol>
