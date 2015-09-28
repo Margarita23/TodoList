@@ -1,6 +1,7 @@
 <div id = "stat">
-    <% @exp.each do |i|%>
-    <p><%= i.name %></p>
+    <% @sq.each do |i|%>
+    <p><%= i["val"] %></p>
+    <p><%= i["key"] %></p>
     <% end %>
 <ol>
     <li>
