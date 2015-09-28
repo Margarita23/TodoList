@@ -1,7 +1,16 @@
 <div id = "stat">
+    <table>
     <% @sq.each do |i|%>
-    <p><%= i.title %></p>
+    <tr>
+        <th><%= i.title %></th>
+    </tr>
+    <% i.each do |task| %>
+    <tr>
+        <td><%= task.tasks %></td>
+    </tr>
     <% end %>
+    <% end %>
+    </table>
 <ol>
     <li>
         <h4>All statuses, not repeating, alphabetically ordered:</h4>
