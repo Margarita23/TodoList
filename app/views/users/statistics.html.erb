@@ -4,9 +4,9 @@
     <tr>
         <th><%= i.title %></th>
     </tr>
-    <% i.each do |task| %>
+    <% i.tasks.each do |task| %>
     <tr>
-        <td><%= task.tasks %></td>
+        <td><%= task.name %></td>
     </tr>
     <% end %>
     <% end %>
