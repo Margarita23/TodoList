@@ -54,6 +54,22 @@
     </table>
     </li>
     <li>
+        <h4>The list of all projects containing the ‘a’ letter in the middle of the name, and
+        show the tasks count near each project:</h4>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Count</th>
+            </tr>
+            <% @exp_lists_a.each do |el|%>
+            <tr>
+                <td><%= el.title %></td>
+                <td><%= el.tasks.size %></td>
+            </tr>
+            <% end %>
+        </table>
+    </li> 
+    <li>
         <h4>The list of tasks with duplicate names. Order alphabetically:</h4>
         <ol>
         <% @res.each do |t| %>
