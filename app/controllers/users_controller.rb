@@ -38,8 +38,8 @@ class UsersController < ApplicationController
     @sorted_2 = sort.sort_by { |k| k["name"] }
 #query 4
   @sq = []
-  @user.lists.find_by_sql("SELECT * FROM lists WHERE title LIKE 'N%' ").each do |i|
-    @sq.push({"val"=>i.title, "key"=>i.tasks.name})
+  @user.lists.find_by_sql("SELECT * FROM lists WHERE title LIKE 'N%' ").tasks.each do |i|
+    @sq.push({"key"=>i.name})
   end
   
 #query 5
