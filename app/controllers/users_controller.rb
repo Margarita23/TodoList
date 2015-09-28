@@ -39,7 +39,6 @@ class UsersController < ApplicationController
 #query 4
   
   @sq = @user.lists.find_by_sql("SELECT * FROM lists WHERE title LIKE 'N%' ")
-  end
   
 #query 5
      # @exp_lists_a = @user.lists.where('title REGEXP ".+a.+"')
