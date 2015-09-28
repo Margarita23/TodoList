@@ -37,7 +37,11 @@ class UsersController < ApplicationController
 #query 3
     @sorted_2 = sort.sort_by { |k| k["name"] }
 #query 4
-@exp = @user.lists.find_by_sql("SELECT title FROM lists WHERE title LIKE 'N%' ")
+  sq = []
+  @user.lists.find_by_sql("SELECT * FROM lists WHERE title LIKE 'N%' ").each do |i|
+    sq.push({"val"=>i.title, "key"=>i.tasks.name})
+  end
+  
 #query 5
      # @exp_lists_a = @user.lists.where('title REGEXP ".+a.+"')
 #query 6
